@@ -11,35 +11,49 @@
     "href": "posts/project-proposal/index.html",
     "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
     "section": "",
-    "text": "Housing affordability and rental pricing dynamics are critical economic indicators for both residents and local policy makers. For my senior capstone project, I am building an end-to-end data science pipeline to analyze key factors driving rental and housing prices across targeted urban and college town regions.\nThe primary goal is to combine public real estate listings, census demographic data, and geographic features into an interactive analytical tool and predictive pricing model."
+    "text": "Project Overview\n\n\n\nThis proposal outlines my Senior Capstone Project for the B.S. in Data Science at Brigham Young University-Idaho. The project focuses on combining public real estate market listings with geographic census data to analyze rental affordability and predict fair market valuations using spatial statistics and machine learning."
   },
   {
-    "objectID": "posts/project-proposal/index.html#project-overview",
-    "href": "posts/project-proposal/index.html#project-overview",
+    "objectID": "posts/project-proposal/index.html#personal-academic-background",
+    "href": "posts/project-proposal/index.html#personal-academic-background",
     "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
-    "section": "",
-    "text": "Housing affordability and rental pricing dynamics are critical economic indicators for both residents and local policy makers. For my senior capstone project, I am building an end-to-end data science pipeline to analyze key factors driving rental and housing prices across targeted urban and college town regions.\nThe primary goal is to combine public real estate listings, census demographic data, and geographic features into an interactive analytical tool and predictive pricing model."
+    "section": "1. Personal & Academic Background",
+    "text": "1. Personal & Academic Background\nI am a senior Data Science student at Brigham Young University-Idaho with a strong focus on statistical modeling, machine learning, and spatial analytics.\n\nCore Coursework Completed:\n\nMATH 425: Applied Linear Regression\nCS 450: Machine Learning and Data Mining\nMATH 488: Data Science Capstone / Senior Project Prep\n\nCareer Objectives: Upon graduation, I plan to work as a Data Analyst or Applied Data Scientist in real estate technology, urban economics, or quantitative finance—leveraging predictive models to evaluate asset valuations and market efficiency.\nContact Details:\n\nBYU-I Email: kok24001@byui.edu\nPersonal Email: shengbe.koker@gmail.com"
   },
   {
-    "objectID": "posts/project-proposal/index.html#core-research-questions",
-    "href": "posts/project-proposal/index.html#core-research-questions",
+    "objectID": "posts/project-proposal/index.html#project-motivation-core-research-questions",
+    "href": "posts/project-proposal/index.html#project-motivation-core-research-questions",
     "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
-    "section": "Core Research Questions",
-    "text": "Core Research Questions\n\nKey Drivers: What feature set (square footage, proximity to city center, local median household income) has the strongest predictive power on local rental rates?\nSpatial Variation: How do rental price per square foot cluster geographically across surrounding zip codes?\nPredictive Accuracy: How accurately can machine learning regression models (e.g., Random Forest vs. XGBoost) estimate fair market rental values based on property attributes?"
+    "section": "2. Project Motivation & Core Research Questions",
+    "text": "2. Project Motivation & Core Research Questions\nHousing affordability and rental price volatility are critical economic factors impacting households, urban planners, and real estate investors. Standard real estate algorithms often rely primarily on physical building parameters (e.g., square footage, number of bedrooms/bathrooms), frequently underestimating hyper-local demographic and spatial influences.\n\nPrimary Research Questions\n\nFeature Importance: Which subset of property characteristics (e.g., square footage, proximity to city center, local median household income, vacancy rates) serves as the strongest predictor of rental rates?\nSpatial Clustering: How do price-per-square-foot metrics cluster geographically across neighboring zip codes and census tracts?\nModel Performance: How accurately can machine learning regression models (such as Random Forest and XGBoost) estimate fair market rental values compared to baseline linear models?"
   },
   {
-    "objectID": "posts/project-proposal/index.html#data-sources-tools",
-    "href": "posts/project-proposal/index.html#data-sources-tools",
+    "objectID": "posts/project-proposal/index.html#data-ingestion-technical-stack",
+    "href": "posts/project-proposal/index.html#data-ingestion-technical-stack",
     "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
-    "section": "Data Sources & Tools",
-    "text": "Data Sources & Tools\n\nData Sources:\n\nZillow Research Data & Redfin Data Exports\nU.S. Census Bureau API via R (tidycensus)\n\nTech Stack:\n\nData Wrangling: R (tidyverse, janitor)\nGeospatial Analysis: sf, leaflet\nModeling: tidymodels, ranger\nReporting & Publishing: Quarto, GitHub Pages"
+    "section": "3. Data Ingestion & Technical Stack",
+    "text": "3. Data Ingestion & Technical Stack\nTo address these questions, I am engineering an automated data pipeline in R to ingest, harmonize, and model multi-source datasets.\n\nData Sources\n\nPublic Real Estate Listings: Property features and historical pricing data from Zillow Research and Redfin data exports.\nU.S. Census Bureau Demographic Data: Hyper-local socioeconomic attributes (median household income, housing unit density, poverty rates) retrieved via the tidycensus API.\n\n\n\nTech Stack\n\nData Wrangling & Pipeline: R (tidyverse, janitor)\nSpatial Analysis & GIS: sf, leaflet, spatialreg\nMachine Learning & Modeling: tidymodels, ranger (Random Forest), xgboost\nPublishing & Version Control: Quarto, GitHub Pages, Git"
   },
   {
-    "objectID": "posts/project-proposal/index.html#project-milestones",
-    "href": "posts/project-proposal/index.html#project-milestones",
+    "objectID": "posts/project-proposal/index.html#domain-investigation-real-estate-economics-spatial-econometrics",
+    "href": "posts/project-proposal/index.html#domain-investigation-real-estate-economics-spatial-econometrics",
     "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
-    "section": "Project Milestones",
-    "text": "Project Milestones\n\nMilestone 1: Data Ingestion & Cleaning Pipeline\nMilestone 2: Exploratory Data Analysis & Spatial Mapping\nMilestone 3: Model Training & Hyperparameter Tuning\nMilestone 4: Final Interactive Dashboard & Insights Report"
+    "section": "4. Domain Investigation: Real Estate Economics & Spatial Econometrics",
+    "text": "4. Domain Investigation: Real Estate Economics & Spatial Econometrics\nExecuting this project requires building domain expertise in real estate economics and spatial data science:\n\nHedonic Pricing Theory: Analyzing how individual structural and environmental amenities contribute to overall asset valuation.\nSpatial Autocorrelation: Quantifying neighborhood price dependencies using spatial statistics (e.g., Moran’s I) to identify hot spots and cold spots.\nAffordability Metrics: Calculating price-to-income and rent-to-income ratios across target regions to assess housing stress."
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#unique-project-deliverables",
+    "href": "posts/project-proposal/index.html#unique-project-deliverables",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "5. Unique Project Deliverables",
+    "text": "5. Unique Project Deliverables\nBeyond the core course requirements (blog updates, professional resume, and final presentation), this capstone project will yield the following deliverables:\n\nAutomated ETL & Missing Value Pipeline: An R script for cleaning raw listings, imputing missing geographical coordinates, and joining census spatial polygons.\nInteractive Spatial Map (leaflet & plotly): An interactive geospatial web app displaying price-per-square-foot heatmaps and neighborhood affordability boundaries.\nMachine Learning Model Benchmark: A cross-validated model comparison suite (Lasso/Ridge, Random Forest, XGBoost) built with tidymodels to minimize valuation Root Mean Squared Error (RMSE).\nCustom R Package: A documented R package encapsulating my custom data transformation routines, real estate ggplot2 themes, and spatial evaluation utilities."
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#project-roadmap-milestones",
+    "href": "posts/project-proposal/index.html#project-roadmap-milestones",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "6. Project Roadmap & Milestones",
+    "text": "6. Project Roadmap & Milestones\n\n\n\n\n\n\n\n\nMilestone\nTarget Scope\nStatus\n\n\n\n\nMilestone 1\nProject Proposal & Data Pipeline Architecture\nCompleted\n\n\nMilestone 2\nExploratory Spatial Data Analysis (EDA) & Map Rendering\nIn Progress\n\n\nMilestone 3\nFeature Engineering, Model Training, & Tuning\nUpcoming\n\n\nMilestone 4\nInteractive Dashboard Deployment & Final Report\nUpcoming"
   },
   {
     "objectID": "posts/data-wrangling-and-eda/index.html",
@@ -144,6 +158,6 @@
     "href": "index.html",
     "title": "my-senior-data-science-blog",
     "section": "",
-    "text": "my-senior-data-science-blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling & Exploratory Spatial Analysis: Regional Housing Trends\n\n\n\n\n\n\nData Science\n\n\nReal Estate Analytics\n\n\nR\n\n\nEDA\n\n\n\nA robust computational workflow in R leveraging public real estate data to evaluate pricing distributions, feature correlations, and structural market indicators.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling & Exploratory Spatial Analysis: Regional Housing Trends\n\n\n\n\n\n\nData Science\n\n\nReal Estate Analytics\n\n\nR\n\n\nEDA\n\n\n\nA robust computational workflow in R leveraging public real estate data to evaluate pricing distributions, feature correlations, and structural market indicators.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nSenior Project Proposal: Housing Market & Rental Price Analytics\n\n\n\n\n\n\nProposal\n\n\nData Science\n\n\nR\n\n\nReal Estate\n\n\n\nAn overview of my senior capstone project exploring rental price drivers, spatial trends, and predictive modeling.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\nNo matching items"
+    "text": "my-senior-data-science-blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling & Exploratory Spatial Analysis: Regional Housing Trends\n\n\n\n\n\n\nData Science\n\n\nReal Estate Analytics\n\n\nR\n\n\nEDA\n\n\n\nA robust computational workflow in R leveraging public real estate data to evaluate pricing distributions, feature correlations, and structural market indicators.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nData Wrangling & Exploratory Spatial Analysis: Regional Housing Trends\n\n\n\n\n\n\nData Science\n\n\nReal Estate Analytics\n\n\nR\n\n\nEDA\n\n\n\nA robust computational workflow in R leveraging public real estate data to evaluate pricing distributions, feature correlations, and structural market indicators.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nSenior Project Proposal: Housing Market & Rental Price Analytics\n\n\n\n\n\n\nSenior Project\n\n\nProposal\n\n\nReal Estate Analytics\n\n\nMachine Learning\n\n\nR\n\n\n\nA comprehensive overview of my senior capstone project evaluating rental price drivers, spatial dynamics, and predictive valuation models.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\nNo matching items"
   }
 ]
