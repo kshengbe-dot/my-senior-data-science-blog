@@ -1,11 +1,18 @@
 ---
-title: "My Senior Data Science Project"
-author: "Shengbe Koker"
-date: "2026-09-22"
-categories: [R, Data Science]
-image: "profile.jpg"
+title: "my-senior-data-science-blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is my first post in this Quarto blog. Welcome!\
+Shengbe Mukeh Israel Koker is the name! \
+uckle up for the ride!
 
 ![](profile.jpg)

@@ -1,0 +1,88 @@
+---
+title: "Senior Project Proposal: Housing Market & Rental Price Analytics"
+description: "A comprehensive overview of my senior capstone project evaluating rental price drivers, spatial dynamics, and predictive valuation models."
+author: "Shengbe Koker"
+date: "2026-09-22"
+categories: [Senior Project, Proposal, Real Estate Analytics, Machine Learning, R]
+---
+
+::: callout-note
+## Project Overview
+
+This proposal outlines my Senior Capstone Project for the B.S. in Data Science at Brigham Young University-Idaho. The project focuses on combining public real estate market listings with geographic census data to analyze rental affordability and predict fair market valuations using spatial statistics and machine learning.
+:::
+
+## 1. Personal & Academic Background
+
+I am a senior Data Science student at Brigham Young University-Idaho with a strong focus on statistical modeling, machine learning, and spatial analytics.
+
+- **Core Coursework Completed:**
+  - **MATH 425:** Applied Linear Regression
+  - **CS 450:** Machine Learning and Data Mining
+  - **DS 350:** Data Science peograming / Senior Project Prep
+- **Career Objectives:** Upon graduation, I plan to work as a Data Analyst or Applied Data Scientist in real estate technology, urban economics, or quantitative finance—leveraging predictive models to evaluate asset valuations and market efficiency.
+- **Contact Details:**
+  - BYU-I Email: `kok24001@byui.edu`
+  - Personal Email: `kshengbe@gmail.com`
+
+------------------------------------------------------------------------
+
+## 2. Project Motivation & Core Research Questions
+
+Housing affordability and rental price volatility are critical economic factors impacting households, urban planners, and real estate investors. Standard real estate algorithms often rely primarily on physical building parameters (e.g., square footage, number of bedrooms/bathrooms), frequently underestimating hyper-local demographic and spatial influences.
+
+### Primary Research Questions
+
+1.  **Feature Importance:** Which subset of property characteristics (e.g., square footage, proximity to city center, local median household income, vacancy rates) serves as the strongest predictor of rental rates?
+2.  **Spatial Clustering:** How do price-per-square-foot metrics cluster geographically across neighboring zip codes and census tracts?
+3.  **Model Performance:** How accurately can machine learning regression models (such as Random Forest and XGBoost) estimate fair market rental values compared to baseline linear models?
+
+------------------------------------------------------------------------
+
+## 3. Data Ingestion & Technical Stack
+
+To address these questions, I am engineering an automated data pipeline in R to ingest, harmonize, and model multi-source datasets.
+
+### Data Sources
+
+- **Public Real Estate Listings:** Property features and historical pricing data from Zillow Research and Redfin data exports.
+- **U.S. Census Bureau Demographic Data:** Hyper-local socioeconomic attributes (median household income, housing unit density, poverty rates) retrieved via the `tidycensus` API.
+
+### Tech Stack
+
+- **Data Wrangling & Pipeline:** R (`tidyverse`, `janitor`)
+- **Spatial Analysis & GIS:** `sf`, `leaflet`, `spatialreg`
+- **Machine Learning & Modeling:** `tidymodels`, `ranger` (Random Forest), `xgboost`
+- **Publishing & Version Control:** Quarto, GitHub Pages, Git
+
+------------------------------------------------------------------------
+
+## 4. Domain Investigation: Real Estate Economics & Spatial Econometrics
+
+Executing this project requires building domain expertise in real estate economics and spatial data science:
+
+- **Hedonic Pricing Theory:** Analyzing how individual structural and environmental amenities contribute to overall asset valuation.
+- **Spatial Autocorrelation:** Quantifying neighborhood price dependencies using spatial statistics (e.g., Moran's I) to identify hot spots and cold spots.
+- **Affordability Metrics:** Calculating price-to-income and rent-to-income ratios across target regions to assess housing stress.
+
+------------------------------------------------------------------------
+
+## 5. Unique Project Deliverables
+
+Beyond the core course requirements (blog updates, professional resume, and final presentation), this capstone project will yield the following deliverables:
+
+1.  **Automated ETL & Missing Value Pipeline:** An R script for cleaning raw listings, imputing missing geographical coordinates, and joining census spatial polygons.
+2.  **Interactive Spatial Map (`leaflet` & `plotly`):** An interactive geospatial web app displaying price-per-square-foot heatmaps and neighborhood affordability boundaries.
+3.  **Machine Learning Model Benchmark:** A cross-validated model comparison suite (Lasso/Ridge, Random Forest, XGBoost) built with `tidymodels` to minimize valuation Root Mean Squared Error (RMSE).
+4.  **Custom R Package:** A documented R package encapsulating my custom data transformation routines, real estate `ggplot2` themes, and spatial evaluation utilities.
+
+------------------------------------------------------------------------
+
+## 6. Project Roadmap & Milestones
+
+| Milestone | Target Scope | Status |
+|:-----------------------|:-----------------------|:-----------------------|
+| **Milestone 1** | Project Proposal & Data Pipeline Architecture | **Completed** |
+| **Milestone 2** | Exploratory Spatial Data Analysis (EDA) & Map Rendering | **In Progress** |
+| **Milestone 3** | Feature Engineering, Model Training, & Tuning | **Upcoming** |
+| **Milestone 4** | Interactive Dashboard Deployment & Final Report | **Upcoming** |

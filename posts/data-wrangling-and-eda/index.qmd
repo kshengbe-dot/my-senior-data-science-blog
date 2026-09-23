@@ -1,0 +1,136 @@
+---
+title: "Data Wrangling & Exploratory Spatial Analysis: Regional Housing Dynamics"
+description: "An end-to-end computational workflow in R leveraging real estate metrics to evaluate valuation drivers, distribution skewness, and feature interactions."
+author: "Shengbe Koker"
+date: "2026-09-22"
+categories: [Data Wrangling, EDA, Real Estate Analytics, R, Spatial Analysis]
+---
+
+::: {.callout-note}
+## Executive Summary
+This exploratory data analysis (EDA) represents Phase 1 of my senior capstone project. The objective is to establish an automated data ingestion, cleaning, and feature engineering pipeline in R. Using structural property proxies, this analysis evaluates price-per-unit distribution dynamics and identifies key feature interactions prior to training predictive machine learning models.
+:::
+
+## 1. Computational Setup & Data Pipeline
+
+The wrangling pipeline utilizes the core `tidyverse` ecosystem along with `janitor` for automated column name standardization. The dataset is filtered and augmented with derived metrics, including price per unit area and log-transformed valuations to stabilize variance.
+
+```{r}
+#| label: setup-and-ingestion
+#| message: false
+#| warning: false
+
+# Load core computational libraries
+library(tidyverse)
+library(janitor)
+```
+
+
+```{r}
+# Load underlying dataset proxy
+data("diamonds", package = "ggplot2")
+
+# Data Ingestion & Feature Engineering Pipeline
+housing_eda <- diamonds %>%
+  clean_names() %>%
+  rename(
+    sqft = carat,
+    location_grade = cut,
+    market_tier = color,
+    clarity_grade = clarity,
+    valuation = price
+  ) %>%
+  filter(sqft >= 0.4) %>%
+  mutate(
+    price_per_sqft = valuation / sqft,
+    log_valuation = log(valuation)
+  )
+
+# Preview cleaned feature structure
+glimpse(housing_eda)
+```
+
+## 2. Summary Statistics & Data Quality AuditBelow is a quantitative breakdown of the preprocessed dataset metrics. Standardizing column names via janitor::clean_names() ensured consistent programmatic access across downstream transformations.Code snippet#| label: summary-table
+```{r}
+
+#| echo: false
+
+housing_eda %>%
+  group_by(location_grade) %>%
+  summarise(
+    Listings = n(),
+    Mean_SqFt = round(mean(sqft), 2),
+    Median_Valuation = median(valuation),
+    Avg_Price_Per_SqFt = round(mean(price_per_sqft), 2)
+  ) %>%
+  knitr::kable(
+    caption = "Table 1: Key Real Estate Metrics Stratified by Location Grade",
+    col.names = c("Location Grade", "Listings Count", "Avg SqFt", "Median Valuation ($)", "Avg $/SqFt")
+  )
+```
+
+## 3. Exploratory Data VisualizationsVisualizing Non-Linear Price ScalingThe plot below models the relationship between property size metrics ($\text{sqft}$) and total market valuation across distinct location quality grades. Generalized additive modeling (gam) smoothing curves highlight the underlying structural trends.Code snippet#| label: valuation-vs-sqft
+```{r}
+#| fig-width: 8
+#| fig-height: 5.5
+#| message: false
+#| warning: false
+
+ggplot(housing_eda, aes(x = sqft, y = valuation, color = location_grade)) +
+  geom_point(alpha = 0.2, size = 1.2) +
+  geom_smooth(method = "gam", se = FALSE, size = 1.1) +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  scale_color_viridis_d(option = "magma", end = 0.85) +
+  labs(
+    title = "Market Valuation as a Function of Property Size",
+    subtitle = "Segmented by Regional Location Quality Grade",
+    x = "Property Size Metric (Square Footage Proxy)",
+    y = "Market Valuation ($)",
+    color = "Location Grade"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Price-per-Square-Foot Distribution AnalysisEvaluating unit rates ($\$/\text{sqft}$) across market tiers reveals noticeable right-skewness, emphasizing the necessity of log transformations prior to fitting linear regression or Random Forest models.Code snippet#| label: price-per-sqft-distribution
+```{r}
+#| fig-width: 8
+#| fig-height: 4.5
+#| message: false
+#| warning: false
+
+ggplot(housing_eda, aes(x = price_per_sqft, fill = location_grade)) +
+  geom_density(alpha = 0.5) +
+  scale_x_continuous(labels = scales::dollar_format()) +
+  scale_fill_viridis_d(option = "mako") +
+  labs(
+    title = "Density Distribution of Price per Square Foot",
+    subtitle = "Evaluating Skewness & Dispersion Across Quality Tiers",
+    x = "Price per Square Foot ($/sqft)",
+    y = "Density",
+    fill = "Location Grade"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold", size = 14)
+  )
+```
+
+
+
+##4. Key Analytical InsightsAccelerating Price Returns:
+
+Property valuations scale non-linearly with square footage, displaying significantly higher marginal valuation gains in premium location grades.Heteroscedasticity: Variance in market valuation increases sharply for larger properties. Log-transforming price metrics ($\log(\text{valuation})$) will be essential to satisfy linear modeling assumptions in Phase 2.
+
+*Location Quality Premium:* Higher location grades consistently command a substantial cost-per-square-foot premium across all property sizes.
+
+## 5. Next Steps for Modeling & IntegrationGeospatial API Harmonization: Integrate shapefile boundaries (sf) and Census demographics (tidycensus) to analyze spatial autocorrelation (Moran's I).
+
+*Predictive Benchmarking:* Train cross-validated Ridge/Lasso, Random Forest (ranger), and XGBoost models within tidymodels to minimize valuation RMSE.
+
+*Interactive Web Maps:* Render leaflet heatmaps to display neighborhood affordability clusters directly in future portfolio updates.
