@@ -7,11 +7,39 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "My Senior Data Science Project",
+    "objectID": "posts/project-proposal/index.html",
+    "href": "posts/project-proposal/index.html",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "Housing affordability and rental pricing dynamics are critical economic indicators for both residents and local policy makers. For my senior capstone project, I am building an end-to-end data science pipeline to analyze key factors driving rental and housing prices across targeted urban and college town regions.\nThe primary goal is to combine public real estate listings, census demographic data, and geographic features into an interactive analytical tool and predictive pricing model."
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#project-overview",
+    "href": "posts/project-proposal/index.html#project-overview",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "",
+    "text": "Housing affordability and rental pricing dynamics are critical economic indicators for both residents and local policy makers. For my senior capstone project, I am building an end-to-end data science pipeline to analyze key factors driving rental and housing prices across targeted urban and college town regions.\nThe primary goal is to combine public real estate listings, census demographic data, and geographic features into an interactive analytical tool and predictive pricing model."
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#core-research-questions",
+    "href": "posts/project-proposal/index.html#core-research-questions",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "Core Research Questions",
+    "text": "Core Research Questions\n\nKey Drivers: What feature set (square footage, proximity to city center, local median household income) has the strongest predictive power on local rental rates?\nSpatial Variation: How do rental price per square foot cluster geographically across surrounding zip codes?\nPredictive Accuracy: How accurately can machine learning regression models (e.g., Random Forest vs. XGBoost) estimate fair market rental values based on property attributes?"
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#data-sources-tools",
+    "href": "posts/project-proposal/index.html#data-sources-tools",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "Data Sources & Tools",
+    "text": "Data Sources & Tools\n\nData Sources:\n\nZillow Research Data & Redfin Data Exports\nU.S. Census Bureau API via R (tidycensus)\n\nTech Stack:\n\nData Wrangling: R (tidyverse, janitor)\nGeospatial Analysis: sf, leaflet\nModeling: tidymodels, ranger\nReporting & Publishing: Quarto, GitHub Pages"
+  },
+  {
+    "objectID": "posts/project-proposal/index.html#project-milestones",
+    "href": "posts/project-proposal/index.html#project-milestones",
+    "title": "Senior Project Proposal: Housing Market & Rental Price Analytics",
+    "section": "Project Milestones",
+    "text": "Project Milestones\n\nMilestone 1: Data Ingestion & Cleaning Pipeline\nMilestone 2: Exploratory Data Analysis & Spatial Mapping\nMilestone 3: Model Training & Hyperparameter Tuning\nMilestone 4: Final Interactive Dashboard & Insights Report"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -21,10 +49,17 @@
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "My Senior Data Science Project",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "my-senior-data-science-blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMy Senior Data Science Project\n\n\n\n\n\n\nR\n\n\nData Science\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMy Senior Data Science Project\n\n\n\n\n\n\nR\n\n\nData Science\n\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\n\n\n\n\n\n\nSenior Project Proposal: Housing Market & Rental Price Analytics\n\n\n\n\n\n\nProposal\n\n\nData Science\n\n\nR\n\n\nReal Estate\n\n\n\nAn overview of my senior capstone project exploring rental price drivers, spatial trends, and predictive modeling.\n\n\n\n\n\nSep 22, 2026\n\n\nShengbe Koker\n\n\n\n\n\n\nNo matching items"
   }
 ]
