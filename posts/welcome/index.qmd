@@ -1,0 +1,11 @@
+---
+title: "My Senior Data Science Project"
+author: "Shengbe Koker"
+date: "2026-09-22"
+categories: [R, Data Science]
+image: "profile.jpg"
+---
+
+This is the first post in a Quarto blog. Welcome!
+
+![](profile.jpg)
