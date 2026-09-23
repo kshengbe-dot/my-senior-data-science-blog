@@ -7,8 +7,6 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
-      "/posts/post-with-code/data-wrangling-and-eda/index.html",
-      "/posts/post-with-code/index.html",
       "/posts/data-wrangling-and-eda/index.html",
       "/posts/project-proposal/index.html"
     ]
